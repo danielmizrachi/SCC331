@@ -1,0 +1,45 @@
+{
+  "name": "cloud-server",
+  "version": "1.0.0",
+  "description": "Server running in the cloud as an interface between a Raspberry Pi with attached micro:bits and front end clients",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npx tsc --outDir dist --esModuleInterop index.ts",
+    "start": "node dist",
+    "pm2": "npm run build && pm2 restart 331dev",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElMuchoLoco/IOT-331.git"
+  },
+  "keywords": [
+    "cloud",
+    "server",
+    "stream",
+    "microbit"
+  ],
+  "author": "Daniel Mizrachi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElMuchoLoco/IOT-331/issues"
+  },
+  "homepage": "https://github.com/ElMuchoLoco/IOT-331#readme",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "ms": "^2.1.2",
+    "tedious": "^8.0.1",
+    "utf-8-validate": "^5.0.2",
+    "ws": "^7.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.3",
+    "@types/jsonwebtoken": "^8.3.7",
+    "@types/ms": "^0.7.31",
+    "@types/node": "^13.1.8",
+    "@types/tedious": "^4.0.0",
+    "@types/ws": "^7.2.0",
+    "jest": "^25.1.0"
+  }
+}
